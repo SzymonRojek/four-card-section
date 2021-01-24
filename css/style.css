@@ -66,6 +66,7 @@ img {
   height: 257px;
   padding: 28px;
   background-color: #fff;
+  border-radius: 4px;
 }
 
 .card__heading {
@@ -86,27 +87,35 @@ img {
   margin-top: 76px;
   background: url("../images/icon-supervisor.svg") no-repeat;
   background-position: calc(100% - 28px) calc(100% - 28px);
-  border: 1px green solid;
+  border-top: 3px solid #45d3d3;
+  -webkit-box-shadow: 7px 5px 15px -3px rgba(144, 140, 140, 0.46);
+          box-shadow: 7px 5px 15px -3px rgba(144, 140, 140, 0.46);
 }
 
 .card-2 {
   margin-top: 25px;
   background: url("../images/icon-team-builder.svg") no-repeat;
   background-position: calc(100% - 28px) calc(100% - 28px);
-  border: 1px yellow solid;
+  border-top: 3px solid #ea5353;
+  -webkit-box-shadow: 7px 5px 15px -3px rgba(144, 140, 140, 0.46);
+          box-shadow: 7px 5px 15px -3px rgba(144, 140, 140, 0.46);
 }
 
 .card-3 {
   margin-top: 25px;
   background: url("../images/icon-karma.svg") no-repeat;
   background-position: calc(100% - 28px) calc(100% - 28px);
-  border: 1px pink solid;
+  border-top: 3px solid #fcaf4a;
+  -webkit-box-shadow: 7px 5px 15px -3px rgba(144, 140, 140, 0.46);
+          box-shadow: 7px 5px 15px -3px rgba(144, 140, 140, 0.46);
 }
 
 .card-4 {
   margin-top: 25px;
   background: url("../images/icon-calculator.svg") no-repeat;
   background-position: calc(100% - 28px) calc(100% - 28px);
-  border: 1px red solid;
+  border-top: 3px solid #549ef2;
+  -webkit-box-shadow: 7px 5px 15px -3px rgba(144, 140, 140, 0.46);
+          box-shadow: 7px 5px 15px -3px rgba(144, 140, 140, 0.46);
 }
 /*# sourceMappingURL=style.css.map */
