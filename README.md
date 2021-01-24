@@ -1,7 +1,8 @@
 # Frontend Mentor - Four card feature section
 
-##preview site [here]( https://szymonrojek.github.io/four-card-section/)
-![Design preview for the Four card feature section coding challenge](./design/desktop-preview.jpg)
+## preview site [here](https://szymonrojek.github.io/four-card-section/)
+
+## IN PROGRESS
 
 ## Welcome! 👋
 
