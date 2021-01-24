@@ -1,7 +1,126 @@
-h1 {
-  color: red;
+// $container-lg-width: 1152px;
+// $container-md-width: 960px;
+// $container-sm-width: 768;
+// $container-xs-width: 100%;
+
+// $breakpoint-lg: $container-lg-width - 1;
+// $breakpoint-md: $container-md-width - 1;
+// $breakpoint-sm: $container-sm-width - 1;
+// $breakpoint-xs: 479px;
+
+$gray-600: #4c4e61;
+$gray-300: #a3a5ae;
+$gray-100: #fafafa;
+
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+	box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
+
 body {
-  background-color: rgb(75, 88, 75);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  color: #4D4F62;
+  background-color: #FAFAFA;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+.wrap-component {
+  padding: 50px 32px 32px 32px;
+}
+
+.header__text {
+  text-align: center;
+
+  &-heading {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    line-height: 36px;
+
+    &-main {
+      font-weight: 200;
+    }
+  
+    &-sub {
+      font-weight: 600;
+    }
+  }
+
+  &-description {
+    padding-top: 16px;
+    color: $gray-300;
+    font-weight: 400;
+    line-height: 25px;
+  }
+}
+
+
+.card {
+  height: 257px;
+  padding: 28px;
+  background-color: #fff;
+
+  &__heading {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+
+  &__text {
+    color: $gray-300;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.09px;
+  }
+
+  &-1 {
+    margin-top: 76px;
+    background: url("../images/icon-supervisor.svg") no-repeat;
+    background-position: calc(100% - 28px) calc(100% - 28px);
+    border: 1px green solid;
+  }
+
+  &-2 {
+    margin-top: 25px;
+    background: url("../images/icon-team-builder.svg") no-repeat;
+    background-position: calc(100% - 28px) calc(100% - 28px);
+    border: 1px yellow solid;
+  }
+
+  &-3 {
+    margin-top: 25px;
+    background: url("../images/icon-karma.svg") no-repeat;
+    background-position: calc(100% - 28px) calc(100% - 28px);
+    border: 1px pink solid;
+  }
+
+  &-4 {
+    margin-top: 25px;
+    background: url("../images/icon-calculator.svg") no-repeat;
+    background-position: calc(100% - 28px) calc(100% - 28px);
+    border: 1px red solid;
+  }
 }
