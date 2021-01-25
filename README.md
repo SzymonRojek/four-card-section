@@ -1,13 +1,19 @@
-# Frontend Mentor - Four card feature section
+# Four Card Feature Section
 
-## preview site [here](https://szymonrojek.github.io/four-card-section/)
+## 🎥 preview site &rarr; [here](https://szymonrojek.github.io/four-card-section/)
 
-## IN PROGRESS
+## **For this project I have used:**
+* [x] HTML semantic elements:
+* [x] BEM naming;
+* [x] Pseudo-elements;
+* [x] SASS;
+* [x] Grid and Flex-Box;
+* [x] Mobile First;
+* [x] RWD;
 
-## Welcome! 👋
+* [x] Additional effects: 
+- box-shadow;
+- styled links in the footer: added a nice color to mark these links and light gray underline, light background color for links and blue border color on hover.
 
-Thanks for checking out this front-end coding challenge.
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges allow you to improve your skills in a real-life workflow.
-
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+This challenge has been taken from the website [Frontend Mentor](https://www.frontendmentor.io).
