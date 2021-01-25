@@ -143,6 +143,33 @@ body {
           box-shadow: 7px 5px 15px -3px rgba(145, 141, 141, 0.459);
 }
 
+.footer__attribution {
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+}
+
+.footer__attribution-text {
+  padding-bottom: 0.5em;
+  font-size: 0.8rem;
+  color: #98a7bd;
+  letter-spacing: 0.0625rem;
+}
+
+.footer__attribution-link {
+  display: inline-block;
+  padding-top: 0.5em;
+  text-decoration: none;
+  border-bottom: 0.125rem solid #b7babe;
+  color: #5183f5;
+  font-weight: 600;
+  line-height: 1rem;
+}
+
+.footer__attribution-link:hover {
+  background-color: rgba(81, 131, 245, 0.302);
+  border-bottom: 0.125rem solid #5183f5;
+}
+
 @media (max-width: 320px) {
   .grid__item {
     height: 270px;

@@ -1,13 +1,21 @@
 
-$white-alabaster: rgb(250, 250, 250);
-$gray-700: hsla(0, 2%, 56%, 0.459); // box shadow
-$gray-trout: hsl(234, 12%, 34%);
+// variables
+
+$gray-shadow-alfa: rgba(145, 141, 141, 0.459); // box shadow
+$navy-blue-alpha:rgba(81, 131, 245, 0.302);
+
+$gray-trout: rgb(76, 78, 97);
 $gray-aluminium: rgb(163, 165, 174);
+$gray-bombay:rgb(183, 186, 190);
+$white-alabaster: rgb(250, 250, 250);
 
 $red-mandy: rgb(234, 83, 83);
 $turquoise: rgb(69, 211, 211);
 $yellow-orange: rgb(252, 175, 74);
-$cornflower-blue: rgb(84, 158, 242);
+$cornflower-blue-100: rgb(84, 158, 242);
+$cornflower-blue-200:rgb(81, 131, 245);
+$cadet-blue: rgb(152, 167, 189);
+
 
 $font:'Poppins', sans-serif;
 $base-font-size: 15px;
@@ -102,7 +110,7 @@ body {
     background-position: calc(100% - 28px) calc(100% - 28px);
     background-size: 57px 57px;
     border-top: 3px solid $turquoise;
-    box-shadow: 7px 5px 15px -3px $gray-700;
+    box-shadow: 7px 5px 15px -3px $gray-shadow-alfa;
   }
 
   &-2 {
@@ -111,7 +119,7 @@ body {
     background-size: 57px 57px;
     background-position: calc(100% - 28px) calc(100% - 28px);
     border-top: 3px solid $red-mandy;
-    box-shadow: 7px 5px 15px -3px $gray-700;
+    box-shadow: 7px 5px 15px -3px $gray-shadow-alfa;
   }
 
   &-3 {
@@ -120,7 +128,7 @@ body {
     background-size: 57px 57px;
     background-position: calc(100% - 28px) calc(100% - 28px);
     border-top: 3px solid $yellow-orange;
-    box-shadow: 7px 5px 15px -3px $gray-700;
+    box-shadow: 7px 5px 15px -3px $gray-shadow-alfa;
   }
 
   &-4 {
@@ -128,10 +136,40 @@ body {
     background: url("../images/icon-calculator.svg") no-repeat;
     background-size: 57px 57px;
     background-position: calc(100% - 28px) calc(100% - 28px);
-    border-top: 3px solid $cornflower-blue;
-    box-shadow: 7px 5px 15px -3px $gray-700;
+    border-top: 3px solid $cornflower-blue-100;
+    box-shadow: 7px 5px 15px -3px $gray-shadow-alfa;
   }
 }
+
+
+.footer__attribution {
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+
+    &-text {
+      padding-bottom: 0.5em;
+      font-size: 0.8rem;
+      color: $cadet-blue;
+      letter-spacing: 0.0625rem;
+    } 
+
+    &-link {
+      display: inline-block;
+      padding-top: 0.5em;
+      text-decoration: none;
+      border-bottom: 0.125rem solid $gray-bombay;
+      color: $cornflower-blue-200;
+      font-weight: 600;
+      line-height: 1rem;
+
+      &:hover {
+        background-color: $navy-blue-alpha;
+        border-bottom: 0.125rem solid $cornflower-blue-200;
+      }
+    }
+}
+
+
 
 @media (max-width: 320px) {
   .grid__item {
