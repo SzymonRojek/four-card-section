@@ -1,12 +1,3 @@
-// $container-lg-width: 1152px;
-// $container-md-width: 960px;
-// $container-sm-width: 768;
-// $container-xs-width: 100%;
-
-// $breakpoint-lg: $container-lg-width - 1;
-// $breakpoint-md: $container-md-width - 1;
-// $breakpoint-sm: $container-sm-width - 1;
-// $breakpoint-xs: 479px;
 
 $gray-600: #4c4e61;
 $gray-300: #a3a5ae;
@@ -30,7 +21,6 @@ html {
 	scroll-behavior: smooth;
 }
 
-
 body {
   display: grid;
   place-items: center;
@@ -53,6 +43,7 @@ img {
 .grid {
   display: grid;
   gap: 25px;
+  grid-template-areas: "card1" "card2" "card3" "card4";
 }
 
 .header__text {
@@ -82,7 +73,6 @@ img {
   }
 }
 
-
 .card {
   height: 257px;
   padding: 28px;
@@ -105,15 +95,16 @@ img {
   }
 
   &-1 {
-    // margin-top: 76px;
+    grid-area: card1;
     background: url("../images/icon-supervisor.svg") no-repeat;
     background-position: calc(100% - 28px) calc(100% - 28px);
     border-top: 3px solid $cyan;
     box-shadow: 7px 5px 15px -3px rgba(144, 140, 140, 0.46);
+
   }
 
   &-2 {
-    // margin-top: 25px;
+    grid-area: card2;
     background: url("../images/icon-team-builder.svg") no-repeat;
     background-position: calc(100% - 28px) calc(100% - 28px);
     border-top: 3px solid $red;
@@ -121,7 +112,7 @@ img {
   }
 
   &-3 {
-    // margin-top: 25px;
+    grid-area: card3;
     background: url("../images/icon-karma.svg") no-repeat;
     background-position: calc(100% - 28px) calc(100% - 28px);
     border-top: 3px solid $orange;
@@ -129,7 +120,7 @@ img {
   }
 
   &-4 {
-    // margin-top: 25px;
+    grid-area: card4;
     background: url("../images/icon-calculator.svg") no-repeat;
     background-position: calc(100% - 28px) calc(100% - 28px);
     border-top: 3px solid $blue;
@@ -142,13 +133,18 @@ img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 25px;
+    grid-template-areas: "card1 card2" "card3 card4";
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1058px) {
   .grid {
-    // grid-template-columns: repeat(3, 1fr);
- 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "null  card2 null1"
+    "card1 card2 card4"
+    "card1 card3 card4"
+    "null3 card3 null4";
   }
 }
