@@ -50,6 +50,11 @@ img {
   padding: 50px 32px 32px 32px;
 }
 
+.grid {
+  display: grid;
+  gap: 25px;
+}
+
 .header__text {
   text-align: center;
 
@@ -73,6 +78,7 @@ img {
     color: $gray-300;
     font-weight: 400;
     line-height: 25px;
+    margin-bottom: 76px;
   }
 }
 
@@ -82,6 +88,7 @@ img {
   padding: 28px;
   background-color: #fff;
   border-radius: 4px;
+  
 
   &__heading {
     font-size: 20px;
@@ -98,7 +105,7 @@ img {
   }
 
   &-1 {
-    margin-top: 76px;
+    // margin-top: 76px;
     background: url("../images/icon-supervisor.svg") no-repeat;
     background-position: calc(100% - 28px) calc(100% - 28px);
     border-top: 3px solid $cyan;
@@ -106,7 +113,7 @@ img {
   }
 
   &-2 {
-    margin-top: 25px;
+    // margin-top: 25px;
     background: url("../images/icon-team-builder.svg") no-repeat;
     background-position: calc(100% - 28px) calc(100% - 28px);
     border-top: 3px solid $red;
@@ -114,7 +121,7 @@ img {
   }
 
   &-3 {
-    margin-top: 25px;
+    // margin-top: 25px;
     background: url("../images/icon-karma.svg") no-repeat;
     background-position: calc(100% - 28px) calc(100% - 28px);
     border-top: 3px solid $orange;
@@ -122,10 +129,26 @@ img {
   }
 
   &-4 {
-    margin-top: 25px;
+    // margin-top: 25px;
     background: url("../images/icon-calculator.svg") no-repeat;
     background-position: calc(100% - 28px) calc(100% - 28px);
     border-top: 3px solid $blue;
     box-shadow: 7px 5px 15px -3px rgba(144, 140, 140, 0.46);
+  }
+}
+
+@media (min-width: 420px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .grid {
+    // grid-template-columns: repeat(3, 1fr);
+ 
   }
 }
