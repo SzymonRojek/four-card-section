@@ -1,13 +1,16 @@
 
-$gray-600: #4c4e61;
-$gray-300: #a3a5ae;
-$gray-100: #fafafa;
+$white-alabaster: rgb(250, 250, 250);
+$gray-700: hsla(0, 2%, 56%, 0.459); // box shadow
+$gray-trout: hsl(234, 12%, 34%);
+$gray-aluminium: rgb(163, 165, 174);
 
-$red: hsl(0, 78%, 62%);
-$cyan: hsl(180, 62%, 55%);
-$orange: hsl(34, 97%, 64%);
-$blue: hsl(212, 86%, 64%);
+$red-mandy: rgb(234, 83, 83);
+$turquoise: rgb(69, 211, 211);
+$yellow-orange: rgb(252, 175, 74);
+$cornflower-blue: rgb(84, 158, 242);
 
+$font:'Poppins', sans-serif;
+$base-font-size: 15px;
 
 *,
 *::before,
@@ -18,40 +21,38 @@ $blue: hsl(212, 86%, 64%);
 }
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  font-size: $base-font-size;
 }
 
 body {
   display: grid;
   place-items: center;
   min-height: 100vh;
-  font-size: 15px;
-  font-family: 'Poppins', sans-serif;
-  color: #4D4F62;
-  background-color: #FAFAFA;
-}
-
-img {
-	max-width: 100%;
-	display: block;
+  font-family: $font;
+  background-color: $white-alabaster;
 }
 
 .wrap-component {
+  display: grid;
+  place-items: center;
+  max-width: 1440px;
   padding: 50px 32px 32px 32px;
 }
 
 .grid {
   display: grid;
   gap: 25px;
-  grid-template-areas: "card1" "card2" "card3" "card4";
+  grid-template-areas: "c1" "c2" "c3" "c4";
 }
 
 .header__text {
-  text-align: center;
-
+  max-width: 460px;
+  color: $gray-trout;
   &-heading {
     display: flex;
     flex-direction: column;
+    align-items: center;
     font-size: 24px;
     line-height: 36px;
 
@@ -65,29 +66,30 @@ img {
   }
 
   &-description {
+    margin-bottom: 76px;
     padding-top: 16px;
-    color: $gray-300;
+    text-align: center;
+    color: $gray-aluminium;
     font-weight: 400;
     line-height: 25px;
-    margin-bottom: 76px;
   }
 }
 
-.card {
+.grid__item {
   height: 257px;
   padding: 28px;
-  background-color: #fff;
+  background-color: $white-alabaster;
   border-radius: 4px;
   
-
-  &__heading {
+  &-heading {
     font-size: 20px;
+    color: $gray-trout;
     font-weight: 600;
     line-height: 30px;
   }
 
-  &__text {
-    color: $gray-300;
+  &-text {
+    color: $gray-aluminium;
     font-size: 13px;
     font-weight: 400;
     line-height: 23px;
@@ -95,36 +97,58 @@ img {
   }
 
   &-1 {
-    grid-area: card1;
+    grid-area: c1;
     background: url("../images/icon-supervisor.svg") no-repeat;
     background-position: calc(100% - 28px) calc(100% - 28px);
-    border-top: 3px solid $cyan;
-    box-shadow: 7px 5px 15px -3px rgba(144, 140, 140, 0.46);
-
+    background-size: 57px 57px;
+    border-top: 3px solid $turquoise;
+    box-shadow: 7px 5px 15px -3px $gray-700;
   }
 
   &-2 {
-    grid-area: card2;
+    grid-area: c2;
     background: url("../images/icon-team-builder.svg") no-repeat;
+    background-size: 57px 57px;
     background-position: calc(100% - 28px) calc(100% - 28px);
-    border-top: 3px solid $red;
-    box-shadow: 7px 5px 15px -3px rgba(144, 140, 140, 0.46);
+    border-top: 3px solid $red-mandy;
+    box-shadow: 7px 5px 15px -3px $gray-700;
   }
 
   &-3 {
-    grid-area: card3;
+    grid-area: c3;
     background: url("../images/icon-karma.svg") no-repeat;
+    background-size: 57px 57px;
     background-position: calc(100% - 28px) calc(100% - 28px);
-    border-top: 3px solid $orange;
-    box-shadow: 7px 5px 15px -3px rgba(144, 140, 140, 0.46);
+    border-top: 3px solid $yellow-orange;
+    box-shadow: 7px 5px 15px -3px $gray-700;
   }
 
   &-4 {
-    grid-area: card4;
+    grid-area: c4;
     background: url("../images/icon-calculator.svg") no-repeat;
+    background-size: 57px 57px;
     background-position: calc(100% - 28px) calc(100% - 28px);
-    border-top: 3px solid $blue;
-    box-shadow: 7px 5px 15px -3px rgba(144, 140, 140, 0.46);
+    border-top: 3px solid $cornflower-blue;
+    box-shadow: 7px 5px 15px -3px $gray-700;
+  }
+}
+
+@media (max-width: 320px) {
+  .grid__item {
+    height: 270px;
+
+    &-heading {
+      font-size: 17px;
+    }
+
+    &-description {
+      font-size: 12px;
+    }
+  }
+
+  .header__text-heading {
+    font-size: 22px;
+    text-align: center;
   }
 }
 
@@ -133,18 +157,22 @@ img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: "card1 card2" "card3 card4";
+    grid-template-areas: 
+    "c1 c2" 
+    "c3 c4";
   }
 }
 
-@media (min-width: 1058px) {
+@media (min-width: 767px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-template-areas: 
-    "null  card2 null1"
-    "card1 card2 card4"
-    "card1 card3 card4"
-    "null3 card3 null4";
+    "null  c2 null1"
+    "c1    c2    c4"
+    "c1    c3    c4"
+    "null3 c3 null4";
   }
 }
+
+
