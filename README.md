@@ -3,7 +3,7 @@
 ## 🎥 preview site &rarr; [here](https://szymonrojek.github.io/four-card-section/)
 
 ## **For this project I have used:**
-* [x] HTML semantic elements:
+* [x] HTML semantic elements;
 * [x] BEM naming;
 * [x] Pseudo-elements;
 * [x] SASS;
