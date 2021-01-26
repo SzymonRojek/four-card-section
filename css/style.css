@@ -79,12 +79,13 @@ img {
 }
 
 .grid__item {
+  position: relative;
   padding: 28px 28px 100px 28px;
   background-color: #fafafa;
   border-radius: 4px;
-  -webkit-box-shadow: 7px 5px 15px -3px rgba(145, 141, 141, 0.459);
-          box-shadow: 7px 5px 15px -3px rgba(145, 141, 141, 0.459);
-  position: relative;
+  -webkit-box-shadow: 2px 5px 13px -2px #aec8e5;
+          box-shadow: 2px 5px 13px -2px #aec8e5;
+  background-color: white;
 }
 
 .grid__item-heading {

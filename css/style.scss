@@ -1,13 +1,14 @@
 
 // variables
 
-$gray-shadow-alfa: rgba(145, 141, 141, 0.459); // box shadow
+$blue-spindle: rgb(174, 200, 229); // box shadow
 $navy-blue-alpha:rgba(81, 131, 245, 0.302);
 
 $gray-trout: rgb(76, 78, 97);
 $gray-aluminium: rgb(163, 165, 174);
 $gray-bombay:rgb(183, 186, 190);
 $white-alabaster: rgb(250, 250, 250);
+$white: rgb(255, 255, 255);
 
 $red-mandy: rgb(234, 83, 83);
 $turquoise: rgb(69, 211, 211);
@@ -39,6 +40,7 @@ body {
   min-height: 100vh;
   font-family: $font;
   background-color: $white-alabaster;
+
 }
 
 img {
@@ -90,11 +92,12 @@ img {
 }
 
 .grid__item {
+  position: relative;
   padding: 28px 28px 100px 28px;
   background-color: $white-alabaster;
   border-radius: 4px;
-  box-shadow: 7px 5px 15px -3px $gray-shadow-alfa;
-  position: relative;
+  box-shadow: 2px 5px 13px -2px $blue-spindle;
+  background-color: $white;
   
   &-heading {
     font-size: 20px;
@@ -190,5 +193,3 @@ img {
     "null3 c3 null4";
   }
 }
-
-
