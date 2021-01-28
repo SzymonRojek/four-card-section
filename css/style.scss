@@ -1,22 +1,16 @@
-
-// variables
-
-$blue-spindle: rgb(174, 200, 229); // box shadow
+$blue-spindle: rgb(211, 224, 239); // box shadow
 $navy-blue-alpha:rgba(81, 131, 245, 0.302);
-
 $gray-trout: rgb(76, 78, 97);
 $gray-aluminium: rgb(163, 165, 174);
 $gray-bombay:rgb(183, 186, 190);
 $white-alabaster: rgb(250, 250, 250);
 $white: rgb(255, 255, 255);
-
 $red-mandy: rgb(234, 83, 83);
 $turquoise: rgb(69, 211, 211);
 $yellow-orange: rgb(252, 175, 74);
 $cornflower-blue-100: rgb(84, 158, 242);
 $cornflower-blue-200:rgb(81, 131, 245);
 $cadet-blue: rgb(152, 167, 189);
-
 
 $font:'Poppins', sans-serif;
 $base-font-size: 15px;
@@ -26,7 +20,7 @@ $base-font-size: 15px;
 *::after {
   margin: 0;
   padding: 0;
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -40,37 +34,31 @@ body {
   min-height: 100vh;
   font-family: $font;
   background-color: $white-alabaster;
-
-}
-
-img {
-	max-width: 100%;
-	display: block;
 }
 
 .wrap-component {
   display: grid;
   place-items: center;
-  max-width: 1440px;
-  padding: 50px 32px 32px 32px;
+  max-width: 90rem;
+  padding: 2rem 1.5625rem 1rem 1.5625rem;
 }
 
 .grid {
   display: grid;
-  gap: 25px;
+  gap: 1.5625rem;
   grid-template-areas: "c1" "c2" "c3" "c4";
 }
 
 .header {
-  max-width: 460px;
+  max-width: 33.75rem;
   color: $gray-trout;
 
   &__heading {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
 
     &-main {
       font-weight: 200;
@@ -82,71 +70,72 @@ img {
   }
 
   &__description {
-    margin-bottom: 76px;
-    padding-top: 16px;
+    margin-bottom: 3.5rem;
+    padding-top: 0.8125rem;
     text-align: center;
-    color: $gray-aluminium;
     font-weight: 400;
-    line-height: 25px;
+    line-height: 1.5625rem;
+    color: $gray-aluminium;
   }
 }
 
 .grid__item {
   position: relative;
-  padding: 28px 28px 100px 28px;
-  background-color: $white-alabaster;
-  border-radius: 4px;
-  box-shadow: 2px 5px 13px -2px $blue-spindle;
+  max-width: 21.875rem;
+  padding: 1.75rem 1.75rem 6.125rem 1.75rem;
+  border-top: 0.25rem solid;
+  border-radius: 0.3125rem;
   background-color: $white;
+  box-shadow: 0.3125rem 0.8125rem 1rem -0.0625rem $blue-spindle;
   
   &-heading {
-    font-size: 20px;
-    color: $gray-trout;
+    font-size: 1.25rem;
     font-weight: 600;
-    line-height: 30px;
+    line-height: 1.875rem;
+    color: $gray-trout;
   }
 
   &-text {
-    color: $gray-aluminium;
-    font-size: 13px;
+    padding-top: 0.125rem;
+    font-size: 0.8125rem;
     font-weight: 400;
-    line-height: 23px;
-    letter-spacing: 0.09px;
+    line-height: 1.4375rem;
+    letter-spacing: 0.0056rem;
+    color: $gray-aluminium;
   }
 
   &-img {
-    height: 57px;
-    width: 57px;
+    height: 3.5625rem;
+    width: 3.5625rem;
     position: absolute;
-    bottom: 28px;
-    right: 28px;
+    bottom: 1.75rem;
+    right: 1.75rem;
   }
 
   &-1 {
     grid-area: c1;
-    border-top: 3px solid $turquoise;
+    border-color: $turquoise;
   }
 
   &-2 {
     grid-area: c2;
-    border-top: 3px solid $red-mandy;
+    border-color: $red-mandy;
   }
 
   &-3 {
     grid-area: c3;
-    border-top: 3px solid $yellow-orange;
+    border-color: $yellow-orange;
   }
 
   &-4 {
     grid-area: c4;
-    border-top: 3px solid $cornflower-blue-100;
+    border-color: $cornflower-blue-100;
   }
 }
 
-
 .footer__attribution {
   text-align: center;
-  padding: 2rem 0 1rem 0;
+  padding-top: 1.5em;
 
     &-text {
       padding-bottom: 0.5em;
@@ -171,25 +160,42 @@ img {
     }
 }
 
-@media (min-width: 420px) {
+// 420px
+@media (min-width: 28rem) {
   .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: 
-    "c1 c2" 
-    "c3 c4";
+    grid-template-areas: "c1 c2" "c3 c4";
   }
 }
 
-@media (min-width: 767px) {
+// 820px
+@media (min-width: 55rem) {
+  .header__heading {
+    font-size: 2.25rem;
+    line-height: 3.1875rem;
+  }
+
   .grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    grid-template-areas: 
-    "null  c2 null1"
-    "c1    c2    c4"
-    "c1    c3    c4"
-    "null3 c3 null4";
-  }
+    grid-template-areas: "null c2 null1" "c1 c2 c4" "c1 c3 c4" "null2 c3 null3";
+    gap: 2rem;
+
+    .grid__item {
+      padding: 1.5625rem 2rem 7.5rem 2rem;
+
+      &-heading {
+        padding-bottom: 0.375rem;
+      }
+
+      &-img {
+        height: 4rem;
+        width: 4rem;
+        bottom: 2rem;
+        right: 2rem;
+      }
+    }
+  } 
 }
