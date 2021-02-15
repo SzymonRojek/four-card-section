@@ -21,6 +21,10 @@ body {
   background-color: #fafafa;
 }
 
+img {
+  display: block;
+}
+
 .wrap-component {
   display: -ms-grid;
   display: grid;
@@ -102,8 +106,8 @@ body {
 }
 
 .grid__item-img {
-  height: 3.5625rem;
-  width: 3.5625rem;
+  height: 3.8rem;
+  width: 3.8em;
   position: absolute;
   bottom: 1.75rem;
   right: 1.75rem;
@@ -196,8 +200,8 @@ body {
     padding-bottom: 0.375rem;
   }
   .grid .grid__item-img {
-    height: 4rem;
-    width: 4rem;
+    height: 4.267rem;
+    width: 4.267rem;
     bottom: 2rem;
     right: 2rem;
   }
